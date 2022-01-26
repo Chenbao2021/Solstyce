@@ -1,9 +1,0 @@
-<html>
-<body>
-<img src="https://github.com/Chenbao2021/Engineering-School-Programs/blob/40e565f903687a3fbc1a648b86598e4ba91ea6fe/WEB/frontEnd/Training1_Solstyce/images/haut_droit.png?raw=true">
-
-<h1>Maintenant c'est 2022</h1>
-</form>
-
-</body>
-</html>
