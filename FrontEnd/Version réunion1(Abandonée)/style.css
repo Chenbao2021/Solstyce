@@ -1,0 +1,207 @@
+html, body { height: 100%; width: 100%; margin: 0; }
+
+body {
+    background-image: url(images/background.jpg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+
+    display:grid;
+    grid-template-rows: 15% 85%;
+    grid-template-columns:1fr ;
+    grid-template-areas: "Bandeau" "affichage";
+}
+
+
+
+#Bandeau{
+    opacity:0.7;
+    background-color: white;
+    grid-area: "Bandeau" ;
+    display:grid;
+    grid-template-columns: 8fr 2fr ;
+    grid-template-rows: 1fr;
+    grid-template-areas: "centre droite";
+
+    font-size: 70%;
+
+
+}
+
+#parametre{
+    position:absolute;
+    top:4%;
+    left:1%;
+    text-align: center;
+
+    padding:0px 15px;
+    border:1px;
+    border-radius: 4px;
+    background-color: grey;
+
+    display:none;
+}
+
+#logoDroite{background-image: url(images/haut_droit.png);
+    grid-area:"droite";
+    background-size: 100% 100%;
+}
+
+#choisirCentrale{
+    position:relative;
+    left:40%;
+}
+#saisirCentrale{
+    grid-area: "centre";
+    text-align: center;
+    background-color:white;
+    opacity:0.9;
+}
+
+#tousLesCentrales{
+        width: 20%;
+        background: radial-gradient(circle, rgba(247, 150, 192, 1) 0%, rgba(118, 174, 241, 1) 100%);
+        border: none;
+        color: #fff;
+        font-family: 'Lato', sans-serif;
+        border-radius: 10px;
+        cursor: pointer;
+}
+
+
+#affichage{
+    grid-area:"affichage";
+    display:grid;
+    grid-template-columns: 65% 35% ;
+    grid-template-areas: "n v";
+    height:100%;
+}
+
+#annonce{
+    grid-area: "n";
+    background-image: url(images/zhizhang.jpg);
+    background-size: 60% 95%;
+    background-repeat: no-repeat;
+    font-size:90%;
+    opacity:0.95;
+    position:relative;
+    left:5%;
+    top:2%;
+
+    opacity:0;
+
+    z-index: 0;
+}
+
+#valeurs{
+    grid-area:"v";
+    width:80%;
+    border:0px;
+
+    font-size: 60%;
+
+    z-index: 5;
+
+}
+#annoncePlan{
+    position:relative;
+    top:10%;
+    left:6%;
+    text-align: center;
+    width:50%;
+
+
+}
+
+
+#valeurs button{
+    font-size: 60%;
+}
+
+
+#tableauDetaille{
+    position:absolute;
+
+    left:10%;
+
+    width:40%;
+    height: 60%;
+}
+#box {
+    padding: 2% 4% 2% 4%;
+    line-height: 250%;
+    border-radius: 5px;
+    font-size: 200%;
+    font-family: Arial;
+    color: white;
+    width: 100%;
+    height:10%;
+    margin-left: 0px;
+    margin-bottom:3%;
+    background-color: rgba(0, 0, 0, .7);
+    text-align: right;
+    display:grid;
+    grid-template-areas: "detaille valeurs";
+}
+
+
+#detaille{
+    text-align:left;
+    color:white;
+    text-decoration:unset;
+    background-color:gray;
+    width:40%;
+    height:85%;
+    border-radius: 5px;
+}
+#detaille:hover{
+    background-color:rgb(175, 174, 174);
+}
+
+#detailleServices{
+    position:absolute;
+    left:100%;
+
+    display:none;
+}
+#detailleTable{
+    border:0;
+    background-color:gray;
+    opacity:1;
+}
+#detailleTable button{
+    z-index: 10000;
+}
+
+#valeursp {
+    color:white;
+    font-size:35px;
+    
+    text-decoration:underline;
+}
+
+#parametres{
+    position:absolute;
+}
+#parametre button{
+    display:inline-block;
+    width:80%；
+}
+
+#table{
+    height:60%;
+    position:relative;
+    top: 30%;
+    left: 20%;
+
+    color:white;
+    background: linear-gradient(white, black);
+}
+#table button{
+    position:relative;
+    left:40%;
+}
+
+#table th{
+    color:black;
+    text-decoration: underline;
+}
