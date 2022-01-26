@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Solstyce</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <!-- <script type="text/javascript" src="eye.js"></script> -->
+
+</head>
+<body>
+    <div class="signup">
+        <h1>Inscrivez-vous</h1>
+        <form method="post">
+            
+            <input type="text" name="u" placeholder="Nom d'utilisateur *" required="required" />
+            <input type="email" name="e" placeholder="@gmail.com * " required="required" />
+            <div class="input-box">
+                <input type="password" name="p" placeholder="Mot de passe*" required="required" id="password1" /> 
+                <div id="toggle1" onclick="showHide1(); "></div>
+                <script type="text/javascript">
+                    const password1 = document.getElementById('password1');
+                    const toggle1 = document.getElementById('toggle1');
+
+                    function showHide1(){
+                        if (password1.type === 'password'){
+                            password1.setAttribute('type','text');
+                            toggle1.classList.add('hide')
+                        }else{
+                            password1.setAttribute('type','password');
+                            toggle1.classList.remove('hide')
+                        }
+                    }
+
+                </script>
+            </div>
+            <div class="input-box">
+               
+                <input type="password" name="p" placeholder="Confirmer *" required="required" id="password2" /> 
+                <div id="toggle2" onclick="showHide2(); "></div>
+                <script type="text/javascript">
+                    const password2 = document.getElementById('password2');
+                    const toggle2 = document.getElementById('toggle2');
+
+                    function showHide2(){
+                        if (password2.type === 'password'){
+                            password2.setAttribute('type','text');
+                            toggle2.classList.add('hide')
+                        }else{
+                            password2.setAttribute('type','password');
+                            toggle2.classList.remove('hide')
+                        }
+                    }
+
+                </script>
+            </div>
+           
+      
+
+            <button type="submit" class="btn btn-primary btn-block btn-large">Inscription</button>
+            <div class="mt-4 text-center">
+                * : champ obligatoir 
+            </div>
+            <div class="mt-4 text-center">
+                Vous avez déja un compte ? <br>
+                <a class="connection" href="index.html">Connectez-vous</a>
+            </div>
+        </form>
+    </div>
+
+</body>
+</html>
+
+
+
+
+	
