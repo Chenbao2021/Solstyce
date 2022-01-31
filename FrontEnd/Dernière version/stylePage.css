@@ -28,7 +28,7 @@ body{
   width : 160px;
   padding-top : 3px;
   padding-left : 0px;
-  filter: invert(1);
+  /*filter: invert(1);*/
 }
 
 .fa-2x {
