@@ -10,40 +10,50 @@
 
         <script src="https://rawgit.com/moment/moment/2.2.1/min/moment.min.js"></script>
 
-        <script
-        src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
-        </script>
 
         <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
         <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-        <link rel="stylesheet" type="text/css" href="stylePage.css">
+        <link rel="stylesheet" type="text/css" href="../stylePage.css">
         <link rel="preconnect" href="https://fonts.googleapis.com"> 
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">  
+
 
 
         
 
         <!-- RESPONSIBLE TO ADD AND CUSTOMIZE THE CHARTS TO OUR APPLICATION  -->
-        <script type="text/javascript" src="js/canva1.js"></script>
+        <script type="text/javascript" src="js/script.js"></script>
 
+        <style>
+            #picker{
+                width: 100%;
+                background: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)),url("images/bg.png");
+                padding: 4px 9px;
+                cursor: pointer;
+                border: 1px solid rgb(1, 14, 70);
+                color: antiquewhite;
 
-        
+            }
+        </style>
+
         
 
     </head>
     <body>
         <div class="wrapper">
             <div class="logo">
-                <img src="images/logo2.png" alt="Logo">
+                <img src="../images/logo2.png" alt="Logo">
             </div>
             <nav class="main-menu">
                 <ul>
                     <li>
-                        <a href="#">
+                        <a href="../page.html">
                             <i class="fa fa-home fa-2x"></i>
                             <span class="nav-text">Tableau de bord</span>
                         </a>
@@ -80,7 +90,7 @@
                     </li>
 
                     <li class="has-subnav">
-                        <a href="pages/historique.html">
+                        <a href="historique.html">
                         <i class="fa fa-folder-open-o fa-2x"></i>
                             <span class="nav-text">Historique</span>
                         </a>   
@@ -113,54 +123,73 @@
                     </ul>
             </nav>
 
-<!-- ---------- DASHBOARD ----------- -->
+<!-- ---------- Historique :  ----------- -->
 
 <div class="main">
-    <!--  Header -->
+
+    <div class="container mt-5 mb-5 " style="width: 400px;">
 
 
-   
-    <!-- Main Dashboard -->
-    <div class="dashboard">
-        <div class="dashboard-cards">
+        <!-- <input type="text" id="picker" class="form-control" value="datepicked"> -->
+           <!-- <p><br></p>
+        <p style="color: antiquewhite;">Du  : <b id="start"></b></p>
+        <Au style="color: antiquewhite;">Au : <b id="end"></b></p> -->
 
-            <!-- CANVAS CONTAINERS  -->
-            <div class="card" id="card-1">
-                <div class="chart-canvas">
-                    
-                    <canvas id="myChart" style="width:100%;max-width:700px"></canvas>
-                        <script type="text/javascript" src="js/canva1.js"></script>
-
-                   
-
-                </div>
-            </div>
-            <div class="card"  id="card-2">
-                <div class="chart-canvas">
-
-                    <canvas id="myChart2" style="width:100%;max-width:700px"></canvas>
-                    <script type="text/javascript" src="js/canva2.js"></script>
-
-
-                </div>
-            </div>
-            <div class="card"  id="card-3">
-                <div class="chart-canvas">
-                    <canvas id="myChart3" style="max-height:100%;max-width:100%"></canvas>
-                    <script type="text/javascript" src="js/canva3.js"></script>              
-                 </div>
-            </div>
-            <div class="card"  id="card-4">
-                <div class="chart-canvas">
-                    <canvas id="myChart4" style="width:100%;max-width:700px"></canvas>
-                    <script type="text/javascript" src="js/canva4.js"></script>
-                </div>
-            </div>
-
-            <!-- FIN CANVAS CONTAINER  -->
-
+        <div id="picker">
+            <!-- <i class="fa fa-calendar"></i> -->
+             <span id="date"></span>
+            <i class="fa fa-caret-down"></i>
         </div>
-    </div>
+     
+
+            
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>      
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+      
+       
+
+        <!-- <script type="text/javascript">
+            $('#picker').daterangepicker({
+                opens: 'left',  
+            }, function(start, end, label){
+                $('#start').text(start.format('DD-MM-YYY'))
+                $('#end').text(end.format('DD-MM-YYY'))
+
+            });
+        </script> -->
+
+
+        <script type="text/javascript">
+            $('#picker').daterangepicker({
+               startDate : moment().subtract(29, 'days'),
+               endDate : moment(),
+               ranges : {
+                    'Aujourdhui': [moment(), moment()],
+                    'Hier' : [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+                    '7j derniers ' : [moment().subtract(6, 'days'), moment()],
+                    '30j derniers ' : [moment().subtract(29, 'days'), moment()],
+                    'Ce mois' : [moment().startOf('month'), moment().endOf('month')],
+                    'Dernier mois' : [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+               } 
+            }, function(start, end){
+                 $('#date').html('Du : ' + start.format('DD-MM-YYYY') + ' au : ' + end.format('DD-MM-YYYY'))
+    
+            });
+
+            $('#date').html( 'Du : ' + moment().subtract(29, 'days').format('DD-MM-YYYY') + ' au : ' + moment().format('DD-MM-YYYY'))
+
+
+        </script>
+      
+      
+     </div>
+     
+     
+  
 </div>
 
 

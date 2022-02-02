@@ -28,7 +28,7 @@ body{
   width : 160px;
   padding-top : 3px;
   padding-left : 0px;
-  /*filter: invert(1);*/
+  /* filter: invert(1); */
 }
 
 .fa-2x {
@@ -157,3 +157,61 @@ nav.main-menu li.active>a,
   background-color:#af883f;
 
 }
+
+
+
+
+/* ------- TABLEAU DE BORD ------- */
+
+
+/* .main {
+  height: auto;
+} */
+
+.dashboard {
+  color: var(--first-font-color);
+  height: 90%;
+  background-color: var(--first-bg-color);
+  border-bottom-right-radius: var(--border-radius);
+}
+
+
+.dashboard-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 0 var(--dashboard-margin);
+  padding-bottom: 50px;
+  gap: 50px;
+}
+
+@media only screen and (max-width: 1200px) {
+  .dashboard-cards{
+      grid-template-columns: 1fr;
+  }
+}
+
+.card {
+  width: 100%;   
+  background-color: var(--second-bg-color);
+  border-radius: 11px;
+  box-shadow:  10px 10px 10px #1e324d;
+  /* border-color: black; */
+  border-width: 3px;
+}
+
+.chart-canvas {
+  margin: 22px;
+  position: relative;
+  min-height: 250px;
+}
+
+.chart-options {
+  position: absolute;
+  right: 30px;
+  top: 14px;
+}
+
+
+
+/* ------- HISTORIQUE ------- */
+

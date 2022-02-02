@@ -4,11 +4,32 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width,initial-scale=1">
         <title>Solstyce</title>
+
+        <!-- <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> -->
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/chart.min.js"></script>
+
+        <script src="https://rawgit.com/moment/moment/2.2.1/min/moment.min.js"></script>
+
+        <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
+        </script>
+
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
         <link rel="stylesheet" type="text/css" href="stylePage.css">
         <link rel="preconnect" href="https://fonts.googleapis.com"> 
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">  
+
+
+        
+
+
+
+        
     </head>
     <body>
         <div class="wrapper">
@@ -18,7 +39,7 @@
             <nav class="main-menu">
                 <ul>
                     <li>
-                        <a href="#">
+                        <a href="pageAdmin.html">
                             <i class="fa fa-home fa-2x"></i>
                             <span class="nav-text">Tableau de bord</span>
                         </a>
@@ -31,7 +52,7 @@
                         </a>  
                     </li>
 
-                    <!--  -->
+                    <!--  -->  
                    
                     <li class="has-subnav">
                         <a href="#">
@@ -57,7 +78,7 @@
                     </li>
 
                     <li class="has-subnav">
-                        <a href="#">
+                        <a href="pages/historique.html">
                         <i class="fa fa-folder-open-o fa-2x"></i>
                             <span class="nav-text">Historique</span>
                         </a>   
@@ -90,6 +111,55 @@
                         </li>  
                     </ul>
             </nav>
+
+
+
+<!-- ---------- DASHBOARD ----------- -->
+
+<div class="main">
+  
+    <div class="dashboard">
+        <div class="dashboard-cards">
+
+            <!-- CANVAS CONTAINERS  -->
+            <div class="card" id="card-1">
+                <div class="chart-canvas">
+                    
+                    <canvas id="myChart" style="width:100%;max-width:700px"></canvas>
+                        <script type="text/javascript" src="js/canva1.js"></script>
+
+                   
+
+                </div>
+            </div>
+            <div class="card"  id="card-2">
+                <div class="chart-canvas">
+
+                    <canvas id="myChart2" style="width:100%;max-width:700px"></canvas>
+                    <script type="text/javascript" src="js/canva2.js"></script>
+
+
+                </div>
+            </div>
+            <div class="card"  id="card-3">
+                <div class="chart-canvas">
+                    <canvas id="myChart3" style="max-height:100%;max-width:100%"></canvas>
+                    <script type="text/javascript" src="js/canva3.js"></script>              
+                 </div>
+            </div>
+            <div class="card"  id="card-4">
+                <div class="chart-canvas">
+                    <canvas id="myChart4" style="width:100%;max-width:700px"></canvas>
+                    <script type="text/javascript" src="js/canva4.js"></script>
+                </div>
+            </div>
+
+            <!-- FIN CANVAS CONTAINER  -->
+
+        </div>
+    </div>
+</div>
+
 
         </div>
     </body>
