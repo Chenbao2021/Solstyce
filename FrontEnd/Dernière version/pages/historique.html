@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head> 
+    <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width,initial-scale=1">
         <title>Solstyce</title>
@@ -20,12 +20,12 @@
 
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
         <link rel="stylesheet" type="text/css" href="../stylePage.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com"> 
-        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">  
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
 
 
 
-        
+
 
         <!-- RESPONSIBLE TO ADD AND CUSTOMIZE THE CHARTS TO OUR APPLICATION  -->
         <script type="text/javascript" src="js/script.js"></script>
@@ -42,7 +42,7 @@
             }
         </style>
 
-        
+
 
     </head>
     <body>
@@ -53,21 +53,21 @@
             <nav class="main-menu">
                 <ul>
                     <li>
-                        <a href="../page.html">
+                        <a href="../pageAdmin.html">
                             <i class="fa fa-home fa-2x"></i>
                             <span class="nav-text">Tableau de bord</span>
                         </a>
                     </li>
                     <!-- Que pour l admin -->
-                    <!-- <li class="has-subnav">
-                        <a href="#">
-                            <i class="fa fa-tv fa-2x"></i>
-                            <span class="nav-text">Profile</span>
-                        </a>  
-                    </li> -->
-                   
                     <li class="has-subnav">
-                        <a href="#">
+                        <a href="profile.html">
+                            <i class="fa fa-user fa-2x"></i>
+                            <span class="nav-text">Profile</span>
+                        </a>
+                    </li>
+
+                    <!-- <li class="has-subnav">
+                        <a href="statistiques.html">
                         <i class="fa fa-pie-chart fa-2x"></i>
                             <span class="nav-text">
                                 Statistiques
@@ -76,50 +76,50 @@
                     </li>
 
                     <li>
-                        <a href="#">
+                        <a href="graphes.html">
                             <i class="fa fa-line-chart fa-2x"></i>
                             <span class="nav-text">Graphes </span>
                         </a>
                     </li>
-                
+
                     <li>
-                        <a href="#">
+                        <a href="tableau.html">
                             <i class="fa fa-table fa-2x"></i>
                             <span class="nav-text">Tableaux</span>
                         </a>
-                    </li>
+                    </li> -->
 
                     <li class="has-subnav">
                         <a href="historique.html">
                         <i class="fa fa-folder-open-o fa-2x"></i>
                             <span class="nav-text">Historique</span>
-                        </a>   
+                        </a>
                     </li>
 
                     <!-- Que pour l admin -->
-                    <!-- <li>
-                        <a href="#">
+                    <li>
+                        <a href="parametre.html">
                         <i class="fa fa-gear fa-2x"></i>
                             <span class="nav-text">Paramêtres </span>
                         </a>
-                    </li> -->
-                    
+                    </li>
+
                     <li>
-                        <a href="#">
+                        <a href="infos.html">
                         <i class="fa fa-question-circle fa-2x"></i>
                             <span class="nav-text">
-                                Infos 
+                                Infos
                             </span>
                         </a>
                     </li>
                 </ul>
                     <ul class="logout">
                         <li>
-                            <a href="index.html">
+                            <a href="../index.html">
                                 <i class="fa fa-power-off fa-2x"></i>
-                                <span class="nav-text">Quitter le mode présentation</span>
+                                <span class="nav-text">Déconnexion</span>
                             </a>
-                        </li>  
+                        </li>
                     </ul>
             </nav>
 
@@ -140,21 +140,21 @@
              <span id="date"></span>
             <i class="fa fa-caret-down"></i>
         </div>
-     
 
-            
+
+
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>      
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
         <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
         <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
         <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
         <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
-      
-       
+
+
 
         <!-- <script type="text/javascript">
             $('#picker').daterangepicker({
-                opens: 'left',  
+                opens: 'left',
             }, function(start, end, label){
                 $('#start').text(start.format('DD-MM-YYY'))
                 $('#end').text(end.format('DD-MM-YYY'))
@@ -174,22 +174,22 @@
                     '30j derniers ' : [moment().subtract(29, 'days'), moment()],
                     'Ce mois' : [moment().startOf('month'), moment().endOf('month')],
                     'Dernier mois' : [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
-               } 
+               }
             }, function(start, end){
                  $('#date').html('Du : ' + start.format('DD-MM-YYYY') + ' au : ' + end.format('DD-MM-YYYY'))
-    
+
             });
 
             $('#date').html( 'Du : ' + moment().subtract(29, 'days').format('DD-MM-YYYY') + ' au : ' + moment().format('DD-MM-YYYY'))
 
 
         </script>
-      
-      
+
+
      </div>
-     
-     
-  
+
+
+
 </div>
 
 
@@ -204,13 +204,7 @@
         </div>
 
 
-    
 
+<!-- Copyright (c) 2012-2019 Dan Grossman -->
     </body>
 </html>
-
-
-
-
-
-

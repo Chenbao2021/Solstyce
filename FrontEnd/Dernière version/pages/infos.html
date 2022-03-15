@@ -20,7 +20,7 @@
 
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-        <link rel="stylesheet" type="text/css" href="stylePage.css">
+        <link rel="stylesheet" type="text/css" href="../stylePage.css">
         <link rel="preconnect" href="https://fonts.googleapis.com"> 
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">  
 
@@ -34,19 +34,19 @@
     <body>
         <div class="wrapper">
             <div class="logo">
-                <img src="images/logo2.png" alt="Logo">
+                <img src="../images/logo2.png" alt="Logo">
             </div>
             <nav class="main-menu">
                 <ul>
                     <li>
-                        <a href="pageAdmin.html">
+                        <a href="../pageAdmin.html">
                             <i class="fa fa-home fa-2x"></i>
                             <span class="nav-text">Tableau de bord</span>
                         </a>
                     </li>
                     <!-- Que pour l admin -->
                     <li class="has-subnav">
-                        <a href="pages/profile.html">
+                        <a href="profile.html">
                             <i class="fa fa-user fa-2x"></i>
                             <span class="nav-text">Profile</span>
                         </a>  
@@ -55,7 +55,7 @@
                     <!--  -->  
                    
                     <!-- <li class="has-subnav">
-                        <a href="pages/statistiques.html">
+                        <a href="statistiques.html">
                         <i class="fa fa-pie-chart fa-2x"></i>
                             <span class="nav-text">
                                 Statistiques
@@ -64,21 +64,21 @@
                     </li>
 
                     <li>
-                        <a href="pages/graphes.html">
+                        <a href="graphes.html">
                             <i class="fa fa-line-chart fa-2x"></i>
                             <span class="nav-text">Graphes </span>
                         </a>
                     </li>
                 
                     <li>
-                        <a href="pages/tableau.html">
+                        <a href="tableau.html">
                             <i class="fa fa-table fa-2x"></i>
                             <span class="nav-text">Tableaux</span>
                         </a>
                     </li> -->
 
                     <li class="has-subnav">
-                        <a href="pages/historique.html">
+                        <a href="historique.html">
                         <i class="fa fa-folder-open-o fa-2x"></i>
                             <span class="nav-text">Historique</span>
                         </a>   
@@ -86,7 +86,7 @@
 
                     <!-- Que pour l admin -->
                     <li>
-                        <a href="pages/parametre.html">
+                        <a href="parametre.html">
                         <i class="fa fa-gear fa-2x"></i>
                             <span class="nav-text">Paramêtres </span>
                         </a>
@@ -94,7 +94,7 @@
                     <!--  -->
                     
                     <li>
-                        <a href="pages/infos.html">
+                        <a href="infos.html">
                         <i class="fa fa-question-circle fa-2x"></i>
                             <span class="nav-text">
                                 Infos 
@@ -104,7 +104,7 @@
                 </ul>
                     <ul class="logout">
                         <li>
-                            <a href="index.html">
+                            <a href="../index.html">
                                 <i class="fa fa-power-off fa-2x"></i>
                                 <span class="nav-text">Déconnexion</span>
                             </a>
@@ -118,46 +118,69 @@
 
 <div class="main">
   
-    <div class="dashboard">
-        <div class="dashboard-cards">
+    <div class="main">
+  
+        <div class="dashboard">
+            <div class="dashboard-cards">
+    
+                <!-- -->
+                <div class="card" id="card-1">
+                    <div class="chart-canvas" style="color: white;">
+                        
+                       <p> Le cœur historique de l'activité de Solstyce est l’ingénierie, la construction et l’exploitation de centrales photovoltaïques 
+                           de moyenne et grande puissance. Grâce à son bureau d’études multi-compétences, Solstyce se démarque par une expertise technique 
+                           de pointe et une approche innovante, notamment dans le cadre de projets complexes tant sur les aspects techniques que réglementaires 
+                           . <br> <BR>La société est reconnue par ses clients pour le haut niveau de
+                            qualité et de valeur ajoutée apportée à chaque étape du projet photovoltaïque.
 
-            <!-- CANVAS CONTAINERS  -->
-            <div class="card" id="card-1">
-                <div class="chart-canvas">
+</p>
+                       
+    
+                    </div>
+                </div>
+
+
+            
+
+
+                <div class="card"  id="card-3">
+                    <div class="chart-canvas" style="color: white;">
+                        <br>
+                        <strong style="color: #4682f3;">Secteur :  </strong> Environnement et énergies renouvelables <br><br>
+                       <b style="color: #4682f3;"> Taille de l’entreprise : </b>  51-200 employés <br><br>
+                       <b style="color: #4682f3;"> Siège social : </b>  PARIS, Toutes les régions <br><br>
+                       <b style="color: #4682f3;"> Fondée en : </b> 2009 <br><br>
+                        <b style="color: #4682f3;"> Spécialisations : </b>  Solstyce est une société d’ingénierie et de services spécialisée dans l’énergie solaire et l'électricité photovoltaique
+                     </div>
+                </div>
+
+                <div class="card"  id="card-2">
+                    <div class="chart-canvas">
+    
+                 
+                         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2803.10481714932!2d2.413743215674133!3d48.851594079286706!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66d593986ab03%3A0x46680aea0c6e4dd8!2sSolstyce!5e1!3m2!1sfr!2sfr!4v1647376468387!5m2!1sfr!2sfr"  width="470" height="290" style="border:0;" allowfullscreen="" loading="lazy"></iframe></div>
+    
+                </div>
+                <div class="card"  id="card-4">
+                    <div class="chart-canvas" style="color: white;">
+                        <i class="fa fa-phone"></i>  <h4 style="text-align : center;"> Contactez-nous </h4>
+                       <br>
                     
-                    <canvas id="myChart" style="width:100%;max-width:700px"></canvas>
-                        <script type="text/javascript" src="js/canva1.js"></script>
-
-                   
-
+                    Email : <a href="https://mail.google.com/mail/">contact@solstyce.fr </a> <br>
+                       Téléphone : +33 1 83 62 13 29 <br>
+                       Plus d'infos sur : <a href="http://www.solstyce.fr"> http://www.solstyce.fr</a>
+                        <br><br>
+                       <a href="https://www.linkedin.com/company/solstyce/about/">  <i class='fa fa-linkedin'></i> Linkedin</a>  
+                    </div>
                 </div>
+    
+                <!--  -->
+    
             </div>
-            <div class="card"  id="card-2">
-                <div class="chart-canvas">
-
-                    <canvas id="myChart2" style="width:100%;max-width:700px"></canvas>
-                    <script type="text/javascript" src="js/canva2.js"></script>
-
-
-                </div>
-            </div>
-            <div class="card"  id="card-3">
-                <div class="chart-canvas">
-                    <canvas id="myChart3" style="max-height:100%;max-width:100%"></canvas>
-                    <script type="text/javascript" src="js/canva3.js"></script>              
-                 </div>
-            </div>
-            <div class="card"  id="card-4">
-                <div class="chart-canvas">
-                    <canvas id="myChart4" style="width:100%;max-width:700px"></canvas>
-                    <script type="text/javascript" src="js/canva4.js"></script>
-                </div>
-            </div>
-
-            <!-- FIN CANVAS CONTAINER  -->
-
         </div>
     </div>
+
+   
 </div>
 
 
