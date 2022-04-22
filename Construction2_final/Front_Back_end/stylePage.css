@@ -1,0 +1,311 @@
+@charset "utf-8";
+@import url(//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css);
+
+
+
+/* AJOUT */
+
+
+.interieur1{
+  background :linear-gradient(20deg,rgba(26, 26, 26, 0.8),rgba(17, 16, 16, 0.8)) ; 
+  position: absolute;
+  right: 0px;
+  width: 600px;
+  height: 100px;
+  padding-top: 5px;
+  padding-left: 13px;
+  margin: 20px;
+  color: white;
+  margin-top: -80px;
+
+}
+
+
+
+.interieur2{
+  background :linear-gradient(20deg,rgba(26, 26, 26, 0.8),rgba(17, 16, 16, 0.8)) ;  
+  position: absolute;
+  right: 0px;
+  width: 600px;
+  padding-top: 5px;
+  height: 100px;
+  padding-top: 5px;
+  padding-left: 13px;
+    margin: 20px;
+  color: white;
+  margin-top: 50px;
+}
+.interieur3{
+  background :linear-gradient(20deg,rgba(26, 26, 26, 0.8),rgba(17, 16, 16, 0.8)) ;  
+  position: absolute;
+  right: 0px;
+  width: 600px;
+  height: 100px;
+  padding-top: 5px;
+  padding-left: 13px;
+  margin: 20px;
+  color: white;
+  margin-top: 190px;
+
+}
+
+.interieur4{
+  background :linear-gradient(20deg,rgba(26, 26, 26, 0.8),rgba(17, 16, 16, 0.8)) ;  
+  position: absolute;
+  right: 0px;
+  width: 600px;
+  height: 100px;
+  padding-top: 5px;
+  padding-left: 13px;
+  margin: 20px;
+  color: white;
+  margin-top: 340px;
+
+}
+
+
+
+.interieur2 p, .interieur1 p, .interieur3 p, .interieur4 p{
+  text-decoration: underline;
+
+}
+
+
+
+
+
+
+
+/* FIN AJOUT */  
+
+
+
+* {
+  margin :0;
+  padding : 0;
+  font-family: 'Open Sans', sans-serif;
+
+}
+
+.wrapper{
+  width : 1170px;
+  margin: auto;
+
+}
+
+body{
+  /* background : linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)),url("images/bg.png"); */
+  background :url("images/Solstyce.jpeg");
+
+  height : 100vh;
+  background-size: cover;
+  position : relative ;
+  background-position: center center;
+}
+
+
+.logo img{
+  margin-left: 509px;
+  width : 230px;
+  padding-top : 3px;
+  padding-left : 0px;
+  /* filter: invert(1); */
+}
+
+.fa-2x {
+  font-size: 2.6em;
+}
+.fa {
+  position: relative;
+  display: table-cell;
+  width: 66px;
+  height: 36px;
+  text-align: center;
+  vertical-align: middle;
+  font-size:19px;
+}
+
+
+
+nav li, nav ul {
+  margin: 0;
+  outline: 0;
+  padding: 0;
+}
+
+.main-menu:hover,nav.main-menu.expanded {
+  width:249px;
+  overflow: visible;
+}
+
+.main-menu {
+  width:61px;
+  height:100%;
+  background : linear-gradient(rgba(255, 255, 255, 0.9),rgba(255, 255, 255, 0.9)),url("images/bg.png");
+  border-right: 1.1px solid  #091e94;
+  position: absolute;
+  bottom:0;
+  overflow: hidden;
+  left: 0;
+  transition: width .04s linear;
+  -webkit-transition: width .04s linear;
+  z-index: 1000;
+  top: 0;
+}
+
+
+.main-menu li {
+  width : 251px;
+  display: block;
+  position:relative;
+
+}
+
+.main-menu > ul {
+  margin : 5px 0;
+
+}
+
+
+.main-menu .nav-text {
+  font-family: 'Open Sans', sans-serif;
+
+  width:192px;
+  display: table-cell;
+  vertical-align: middle;
+
+  position: relative;
+}
+
+.main-menu li > a {
+  font-size: 15px;
+  display: table;
+  color: #091e94 ;
+  font-family: 'Open Sans', sans-serif;
+  position: relative;
+  border-spacing: 0;
+  border-collapse: collapse;
+  text-decoration:none;
+  transition:all .1s linear;
+  -webkit-transition:all .1s linear;
+
+
+}
+
+.main-menu .nav-icon {
+  font-size: 17px;
+  text-align: center;
+  position: relative;
+  display: table-cell;
+  height:35px;
+  vertical-align: middle;
+  width:59px;
+
+}
+
+.main-menu > ul.logout {
+  left: 0 ;
+  position: absolute;
+  bottom: 0;
+}
+
+
+
+.no-touch .scrollable.hover:hover {
+  overflow: visible;
+
+  overflow-y: auto;
+
+}
+.no-touch .scrollable.hover {
+  overflow-y: hidden;
+}
+
+a:focus, a:hover {
+ text-decoration: none;
+}
+
+
+
+.dropdown-menu>li>a:hover, .dropdown-menu>.active>a:focus, .dropdown-menu>.active>a:hover, .dropdown-menu>li>a:focus,.dropdown-menu>.active>a,
+.main-menu li:hover>a,.dashboard-page nav.dashboard-menu ul li.active a ,
+nav.main-menu li.active>a,
+.no-touch .dashboard-page nav.dashboard-menu ul li:hover a
+{
+  color: white;
+
+  font-weight: bold;
+  background-color:#030594;
+
+}
+
+
+
+
+/* ------- TABLEAU DE BORD ------- */
+
+
+/* .main {
+  height: auto;
+} */
+
+.dashboard {
+  color: var(--first-font-color);
+  height: 90%;
+  background-color: var(--first-bg-color);
+  border-bottom-right-radius: var(--border-radius);
+}
+
+/* 
+.dashboard-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 0 var(--dashboard-margin);
+  padding-bottom: 50px;
+  gap: 50px;
+} */
+
+
+.dashboard-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 0 var(--dashboard-margin);
+  padding-bottom: 50px;
+  gap: 50px;
+  margin-top: 150px;
+  margin-left: 40px;
+}
+
+@media only screen and (max-width: 1200px) {
+  .dashboard-cards{
+      grid-template-columns: 1fr;
+  }
+}
+
+.card {
+  width: 100%;   
+  background-color: var(--second-bg-color);
+  border-radius: 11px;
+  box-shadow:  10px 10px 10px #1e324d;
+  /* border-color: black; */
+  border-width: 3px;
+}
+
+.chart-canvas {
+  margin: 22px;
+  position: relative;
+  min-height: 250px;
+  background :linear-gradient(20deg,rgba(255, 255, 255, 0.8),rgba(255, 255, 255, 0.8)) ;
+
+}
+
+.chart-options {
+  position: absolute;
+  right: 30px;
+  top: 14px;
+}
+
+
+
+/* ------- HISTORIQUE ------- */
+

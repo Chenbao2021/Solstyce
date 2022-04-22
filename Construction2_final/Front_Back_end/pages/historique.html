@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head> 
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <title>Solstyce</title>
+
+        <!-- <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> -->
+        <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/chart.min.js"></script>
+
+        <script src="https://rawgit.com/moment/moment/2.2.1/min/moment.min.js"></script>
+
+
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="../stylePage.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com"> 
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">  
+
+
+
+        
+
+        <!-- RESPONSIBLE TO ADD AND CUSTOMIZE THE CHARTS TO OUR APPLICATION  -->
+        <script type="text/javascript" src="js/script.js"></script>
+
+        <style>
+            #picker{
+                width: 100%;
+                background: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)),url("images/bg.png");
+                padding: 4px 9px;
+                cursor: pointer;
+                border: 1px solid rgb(1, 14, 70);
+                color: antiquewhite;
+
+            }
+        </style>
+
+        
+
+    </head>
+    <body>
+        <div class="wrapper">
+            <div class="logo">
+                <img src="../images/logo2.png" alt="Logo">
+            </div>
+            <nav class="main-menu">
+                <ul>
+                    <li>
+                        <a href="../pageAdmin.php">
+                            <i class="fa fa-home fa-2x"></i>
+                            <span class="nav-text">Tableau de bord</span>
+                        </a>
+                    </li>
+                    <!-- Que pour l admin -->
+                    <li class="has-subnav">
+                        <a href="profile.php">
+                            <i class="fa fa-user fa-2x"></i>
+                            <span class="nav-text"> Monsieur <?php echo $_SESSION['userName']; ?></span></span>
+                        </a>  
+                    </li>
+
+                    <!--  -->  
+
+                    <li class="has-subnav">
+                        <a href="historique.html">
+                        <i class="fa fa-folder-open-o fa-2x"></i>
+                            <span class="nav-text">Historique</span>
+                        </a>   
+                    </li>
+
+                    <!-- Que pour l admin -->
+                    <li>
+                        <a href="parametre.php">
+                        <i class="fa fa-gear fa-2x"></i>
+                            <span class="nav-text">Paramêtres </span>
+                        </a>
+                    </li>
+                    <!--  -->
+                </ul>
+                    <ul class="logout">
+                        <li>
+                            <a href="../index.php">
+                                <i class="fa fa-power-off fa-2x"></i>
+                                <span class="nav-text">Déconnexion</span>
+                            </a>
+                        </li>  
+                    </ul>
+            </nav>
+
+<!-- ---------- Historique :  ----------- -->
+
+<div class="main">
+
+    <div class="container mt-5 mb-5 " style="width: 400px;">
+
+
+        <!-- <input type="text" id="picker" class="form-control" value="datepicked"> -->
+           <!-- <p><br></p>
+        <p style="color: antiquewhite;">Du  : <b id="start"></b></p>
+        <Au style="color: antiquewhite;">Au : <b id="end"></b></p> -->
+
+        <div id="picker">
+            <!-- <i class="fa fa-calendar"></i> -->
+             <span id="date"></span>
+            <i class="fa fa-caret-down"></i>
+        </div>
+     
+
+            
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>      
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+      
+       
+
+        <!-- <script type="text/javascript">
+            $('#picker').daterangepicker({
+                opens: 'left',  
+            }, function(start, end, label){
+                $('#start').text(start.format('DD-MM-YYY'))
+                $('#end').text(end.format('DD-MM-YYY'))
+
+            });
+        </script> -->
+
+
+        <script type="text/javascript">
+            $('#picker').daterangepicker({
+               startDate : moment().subtract(29, 'days'),
+               endDate : moment(),
+               ranges : {
+                    'Aujourdhui': [moment(), moment()],
+                    'Hier' : [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+                    '7j derniers ' : [moment().subtract(6, 'days'), moment()],
+                    '30j derniers ' : [moment().subtract(29, 'days'), moment()],
+                    'Ce mois' : [moment().startOf('month'), moment().endOf('month')],
+                    'Dernier mois' : [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+               } 
+            }, function(start, end){
+                 $('#date').html('Du : ' + start.format('DD-MM-YYYY') + ' au : ' + end.format('DD-MM-YYYY'))
+    
+            });
+
+            $('#date').html( 'Du : ' + moment().subtract(29, 'days').format('DD-MM-YYYY') + ' au : ' + moment().format('DD-MM-YYYY'))
+
+
+        </script>
+      
+      
+     </div>
+     
+     
+  
+</div>
+
+
+<!-- ---------- FIN DASHBOARD ----------- -->
+
+
+
+
+
+
+
+        </div>
+
+
+    
+
+    </body>
+</html>
+
+
+
+
+
+
